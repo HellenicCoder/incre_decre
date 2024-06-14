@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Increment & Decrement button|| Yahya Nebgui</title>
+    <link rel="stylesheet" href="i.css" />
+    <script src="https://kit.fontawesome.com/6829867d24.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+        <span class="minus">-</span>
+        <span class="num">01</span>
+        <span class="plus">+</span>
+    </div>
+    <script>
+        const plus = document.querySelector(".plus"),
+        num = document.querySelector(".num"),
+        minus = document.querySelector(".minus");
+
+        let a = 1;
+
+        plus.addEventListener("click",() => {
+            a++;
+            a = (a < 10) ? "0" + a : a ;
+            num.innerText = a;
+        });
+
+        minus.addEventListener("click",() => {
+            if(a > 1){
+               a--;
+               a = (a < 10) ? "0" + a : a ;
+               num.innerText = a; 
+            } 
+        });
+    </script>
+  </body>
+</html>
